@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
    pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-   <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<script src="/js/andular.jsp" > </script>
+	<script src="/js/andular.js" > </script>
+	<script src="welcome/js/welcome.js" > </script>
+	
+	<link type="text/css" rel="stylesheet" href="welcome/css/welcome.css" />
 	<title>Insert title here</title>
 </head>
 <body>
@@ -27,7 +29,9 @@
 		<s:property value="getText('hello')" />
 	</h1>
 	
-	
+	<section id="iMenu">
+		<s:include value="/welcome/Welcome_menu.jsp"></s:include>
+	</section>
 	
 	
 	
