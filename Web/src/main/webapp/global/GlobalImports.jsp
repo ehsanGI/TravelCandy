@@ -1,0 +1,1 @@
+<script src="global/js/test.js" > </script>

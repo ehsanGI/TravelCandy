@@ -1,0 +1,23 @@
+@CHARSET "ISO-8859-1";
+
+
+/*   The menu style   */
+
+#iMenu{
+	
+}
+
+#iMenu ul{
+	color: red;
+}
+
+#iMenu ul li{
+	color: red;
+}
+
+#iMenu ul li a{
+	color: red;
+	
+}
+/**********************/
+

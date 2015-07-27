@@ -5,32 +5,35 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<script src="/js/andular.js" > </script>
-	<script src="welcome/js/welcome.js" > </script>
+	<s:include value="/global/GlobalImports.jsp"></s:include>
 	
+	<script src="welcome/js/welcome.js" > </script>
 	<link type="text/css" rel="stylesheet" href="welcome/css/welcome.css" />
 	<title>Insert title here</title>
 </head>
 <body>
 
-	
-	<s:url id="welcomePL" namespace="/" action="hello" >
-      <s:param name="request_locale" >pl</s:param>
-   </s:url>
-   <s:url id="welcomeEN" namespace="/" action="hello" >
-      <s:param name="request_locale" >en</s:param>
-   </s:url>
-   
-   <s:a href="%{welcomeEN}" >English</s:a>
-   <s:a href="%{welcomePL}" >Polish</s:a>
+
+	<section id="iLanguages">
+		<s:url id="welcomePL" namespace="/" action="hello">
+			<s:param name="request_locale">pl</s:param>
+		</s:url>
+		<s:url id="welcomeEN" namespace="/" action="hello">
+			<s:param name="request_locale">en</s:param>
+		</s:url>
+
+		<s:a href="%{welcomeEN}">English</s:a>
+		<s:a href="%{welcomePL}">Polish</s:a>
+		
+	</section>
 
 
 	<h1>
-		<s:property value="getText('hello')" />
+		<s:property value="getText('welcome')" />
 	</h1>
 	
 	<section id="iMenu">
-		<s:include value="/welcome/Welcome_menu.jsp"></s:include>
+		<s:include value="/global/GlobalMenu.jsp"></s:include>
 	</section>
 	
 	
