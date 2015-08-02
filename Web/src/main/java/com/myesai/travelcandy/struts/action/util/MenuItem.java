@@ -17,7 +17,7 @@ public class MenuItem {
 	 */
 	private final String accessRule;
 	
-	protected MenuItem(String name, String url, String accessRule){
+	public MenuItem(String name, String url, String accessRule){
 		this.name = name;
 		this.url = url;
 		this.accessRule = accessRule;

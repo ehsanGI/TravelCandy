@@ -23,9 +23,9 @@ public class MenuItemFactory{
 		
 		//normal way for a few menus
 		List<MenuItem> items = new ArrayList<MenuItem>();
-		items.add(new MenuItem("culture","/culture", null));
-		items.add(new MenuItem("contact","/contact", null));
-		items.add(new MenuItem("candy","/candy", null));
+		items.add(new MenuItem("culture","culture", "rule1"));
+		items.add(new MenuItem("contact","contact", "rule1"));
+		items.add(new MenuItem("candy","candy", "rule2"));
 		putItems(items);
 	}
 	

@@ -1,8 +1,13 @@
 package com.myesai.travelcandy.struts.action;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.myesai.travelcandy.spring.tests.HelloWorld;
+
 public class WelcomeAction extends BaseSimpleAction{
 
-	private static String message = "this is a message";
+	private static String message = "ssdf";
 
 	public WelcomeAction(){
 		super();
@@ -10,7 +15,15 @@ public class WelcomeAction extends BaseSimpleAction{
 	
 	@Override
 	public String execute() throws Exception {
-		this.message = BaseSimpleAction.getGlobalMenuItems().get(0).getName();
+		ApplicationContext context = new ClassPathXmlApplicationContext(
+				"Spring-Module.xml");
+ 
+		HelloWorld obj = (HelloWorld) context.getBean("helloBean");
+		
+		
+		
+		message = obj.getName();
+		
 		return SUCCESS;
 	}
 

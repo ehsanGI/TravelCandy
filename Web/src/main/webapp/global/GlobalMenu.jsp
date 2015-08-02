@@ -23,10 +23,13 @@
 	<section id="iGlobalMenu">
 	
 		<ul>
-				<s:iterator value="globalMenuItems">
+				<s:iterator id="item" value="globalMenuItems" >	
+					<s:if test="%{#item.accessRule=='rule1'}">asd</s:if>
 					<li>
+						
 						<a href="<s:property value="url"/>">
 							<s:property value="name"/>
+							<s:property value="accessRule"/>
 						</a> 
 					</li>
 				</s:iterator>

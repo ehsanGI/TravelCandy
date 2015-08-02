@@ -31,6 +31,7 @@
 	<h1>
 		<s:property value="getText('welcome')" />
 	</h1>
+		<s:property value="message" /> asd
 	
 	<section id="iMenu">
 		<s:include value="/global/GlobalMenu.jsp"></s:include>

@@ -8,19 +8,28 @@
    		<constant name="struts.devMode" value="true" />
    		<constant name="struts.ognl.allowStaticMethodAccess" value="true"/> 
    		<constant name="struts.custom.i18n.resources" value="global" />
-   		
-	   	<package name="helloword" extends="struts-default">
+	   
+   		<constant name="struts.action.extension" value=","/> 
+	   	
+	   	<package name="categorys" extends="struts-default">
 	   		<action name="hello"
 	   				class="com.myesai.travelcandy.struts.action.WelcomeAction"
 	   				method="execute"
 	   				>
-	   				
 	   				<result name="input">welcome/Welcome.jsp</result>
 	   				<result name="success">welcome/Welcome.jsp</result>
-	   		
 	   		</action>
-	   				
+	   		<action name="traditions"
+	   				class="com.myesai.travelcandy.struts.action.CultureAction"
+	   				method="execute"
+	   				>
+	   				<result name="input">culture/Culture.jsp</result>
+	   				<result name="success">culture/Culture.jsp</result>
+	   		</action>
+	   		
+	   		
 	   	</package>
+	   	
    	
    
    
